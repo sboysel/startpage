@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>sam@xavii</title>
+  <meta name="startpage" content="">
+  <meta name="Sam Boysel" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row" style="margin-top: 25%">
+        <div class="one-half column">
+            <h4><span id="clock"></span></h4>
+        </div>
+        <div class="one-half column">
+            <form method="get" action="https://duckduckgo.com/">
+                <input type="search" name="q">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+      <div class="one-third column">
+        <ul>
+          <li><a href="https://www.reddit.com/">reddit</a></li>
+          <li><a href="https://feedly.com/i/collection/content/user/cc7c8881-3fbf-489f-931c-66ea62ddc27b/category/global.all">feedly</a></li>
+          <li><a href="https://www.economist.com/">the economist</a></li>
+          <li><a href="https://www.nytimes.com/">new york times</a></li>
+        </ul>
+      </div>
+      <div class="one-third column">
+        <ul>
+          <li><a href="https://trello.com/samboysel/boards">trello</a></li>
+          <li><a href="https://keep.google.com/u/0/">google keep</a></li>
+          <li><a href="https://keep.google.com/u/0/">google drive</a></li>
+          <li><a href="https://scholar.google.com/">google scholar</a></li>
+        </ul>
+      </div>
+      <div class="one-third column">
+          <ul>
+            <li><a href="https://stackoverflow.com/">stack overflow</a></li>
+            <li><a href="https://www.youtube.com/">youtube</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<!-- time -->
+<script>
+(function () {
+  var clockElement = document.getElementById( "clock" );
+
+  function updateClock ( clock ) {
+    clock.innerHTML = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  }
+
+  setInterval(function () {
+      updateClock( clockElement );
+  }, 1000);
+}());
+</script>
+
+<!-- browser-sync -->
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.27.7'><\/script>".replace("HOST", location.hostname));//]]>
+</script>
+
+
+</body>
+</html>
