@@ -1,0 +1,28 @@
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+p {
+  line-height: 1.2em;
+}
+
+a {
+  color: rgb(70, 119, 179);
+}
+
+.container {
+  margin: auto;
+  width: 1080px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.item {
+  border-left: 4px solid rgb(70, 119, 179);
+  padding: 0px 10px;
+}
